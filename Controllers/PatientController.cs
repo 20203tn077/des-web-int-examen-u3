@@ -69,11 +69,11 @@ namespace ApiExamen.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(int id,[FromBody] Patient patient){
-            if(patient==null || patient.Id !=id){
+        public async Task<IActionResult> Update([FromBody] Patient patient){
+            if(patient==null){
                 return BadRequest();
             }
-            var entity = await _context.Patients!.FindAsync(id);
+            var entity = await _context.Patients!.FindAsync(patient.Id);
             if(entity==null){
                 return NotFound();
             }
