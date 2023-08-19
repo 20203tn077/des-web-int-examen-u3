@@ -13,7 +13,7 @@ public class ApplicationDbContext : DbContext
     
     
     // Owners
-    
+    public DbSet<Owner>? Owners {get; set;}
     
     // Medicines
 }
