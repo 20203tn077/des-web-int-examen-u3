@@ -10,6 +10,7 @@ public class ApplicationDbContext : DbContext
     }
     
     // Patients
+    public DbSet<Patient>? Patients{ get; set;}
     
     
     // Owners
