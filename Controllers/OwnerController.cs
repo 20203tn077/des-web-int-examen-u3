@@ -70,11 +70,11 @@ namespace ApiExamen.Controllers
         }
 
         [HttpPut("Update")]
-        public async Task<IActionResult> Update(int id,[FromBody] Owner owner){
-            if(owner==null || owner.Id !=id){
+        public async Task<IActionResult> Update([FromBody] Owner owner){
+            if(owner==null){
                 return BadRequest();
             }
-            var entity = await _context.Owners!.FindAsync(id);
+            var entity = await _context.Owners!.FindAsync(owner.Id);
             if(entity==null){
                 return NotFound();
             }
