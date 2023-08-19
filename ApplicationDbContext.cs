@@ -16,4 +16,5 @@ public class ApplicationDbContext : DbContext
     
     
     // Medicines
+    public DbSet<Medicine>? Medicines { get; set; }
 }
