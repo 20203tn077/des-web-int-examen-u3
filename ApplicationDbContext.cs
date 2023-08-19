@@ -17,4 +17,5 @@ public class ApplicationDbContext : DbContext
     public DbSet<Owner>? Owners {get; set;}
     
     // Medicines
+    public DbSet<Medicine>? Medicines { get; set; }
 }
